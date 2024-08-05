@@ -1,0 +1,11 @@
+import cv2
+i = cv2.imread(r"C:\Users\MEHWISH\OneDrive\Desktop\rose1.png")
+gb = cv2.GaussianBlur(i, (5,5), 0)
+mb = cv2.medianBlur(i, 5)
+bf = cv2.bilateralFilter(i, 9, 75, 75)
+cv2.imshow("oi", i)
+cv2.imshow("gb",gb)
+cv2.imshow("mb",mb)
+cv2.imshow("bf", bf)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
